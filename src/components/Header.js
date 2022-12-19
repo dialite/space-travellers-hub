@@ -14,30 +14,14 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) => (isActive ? 'activelink' : undefined)}
-          >
-            ROCKETS
-          </NavLink>
+          ROCKETS
         </li>
         <li>
-          <NavLink
-            to="/missions"
-            className={({ isActive }) => (isActive ? 'activelink' : undefined)}
-          >
-            MISSIONS
-          </NavLink>
+          MISSIONS
         </li>
         <li className="divider" />
         <li>
-          <NavLink
-            to="/profile"
-            className={({ isActive }) => (isActive ? 'activelink' : undefined)}
-          >
-            MY PROFILE
-          </NavLink>
+          MY PROFILE
         </li>
       </ul>
     </nav>

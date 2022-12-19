@@ -23,7 +23,7 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
   list-style-type: none;
 }
 
@@ -34,12 +34,6 @@ nav ul li {
 a {
   text-decoration: none;
   color: black;
-  opacity: 0.8;
-}
-
-.activelink {
-  color: black;
-  opacity: 1;
 }
 
 .divider {
