@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+nav {
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style-type: none;
+}
+
+nav ul li {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.8;
+}
+
+.activelink {
+  color: black;
+  opacity: 1;
+}
+
+.divider {
+  background-color: rgba(0, 0, 0, 0.705);
+  width: 2px;
+  height: 20px;
+  opacity: 0.8;
+}
