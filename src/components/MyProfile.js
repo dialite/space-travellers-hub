@@ -1,9 +1,7 @@
 import React from 'react';
 
-const MyProfile = () => {
-  <div>
-    <h1>My Rockets</h1>
-  </div>;
-};
+const MyProfile = () => (
+  <div>MyProfile</div>
+);
 
 export default MyProfile;
