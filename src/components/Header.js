@@ -21,7 +21,12 @@ const Header = () => (
         </li>
         <li className="divider" />
         <li>
-          MY PROFILE
+          <NavLink
+            to="/myprofile"
+            className={({ isActive }) => (isActive ? 'activelink' : undefined)}
+          >
+            MY PROFILE
+          </NavLink>
         </li>
       </ul>
     </nav>
