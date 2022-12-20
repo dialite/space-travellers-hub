@@ -36,9 +36,12 @@ a {
   color: black;
 }
 
+.activelink {
+  text-decoration: underline;
+}
+
 .divider {
   background-color: rgba(0, 0, 0, 0.705);
   width: 2px;
   height: 20px;
-  opacity: 0.8;
 }
