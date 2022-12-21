@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions } from '../redux/Missions/missionSlice';
+import { getMissions, updateMission } from '../redux/Missions/missionSlice';
 import '../styles/Missions.css';
 
 const Missions = () => {
@@ -12,6 +12,10 @@ const Missions = () => {
       dispatch(getMissions());
     }
   }, [dispatch, missions.length]);
+
+  const handleClick = (id) => {
+    dispatch(updateMission(id));
+  };
 
   return (
     <table>
@@ -33,10 +37,18 @@ const Missions = () => {
               {mission.description}
             </td>
             <td className="member">
-              Active Member
+              <span className={mission.reserved ? 'active-member' : 'not-member'}>
+                {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
+              </span>
             </td>
             <td className="join">
-              <button className="btn-join" type="button">Join Mission</button>
+              <button
+                className={`${mission.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
+                type="button"
+                onClick={() => handleClick(mission.mission_id)}
+              >
+                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+              </button>
             </td>
           </tr>
         </tbody>
