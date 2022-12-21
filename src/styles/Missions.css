@@ -1,0 +1,36 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 30px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 10px;
+}
+
+tbody:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.name {
+  width: 10%;
+  vertical-align: top;
+}
+
+.description {
+  width: 70%;
+}
+
+.member,
+.join {
+  text-align: center;
+}
+
+.btn-join {
+  padding: 8px 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+}

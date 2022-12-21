@@ -3,6 +3,7 @@ header {
   padding: 10px 30px;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo {
