@@ -24,7 +24,7 @@ const Missions = () => {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th className="text-white">Empty</th>
+          <th className="text-white"> </th>
         </tr>
       </thead>
       {missions.map((mission) => (
