@@ -21,10 +21,17 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     updateMission: (state, action) => {
-      const updatedMission = state.missionData.find((mission) => (
-        mission.mission_id === action.payload
-      ));
-      updatedMission.reserved = !updatedMission.reserved;
+      state.missionData.map((mission) => {
+        const updatedMission = mission;
+        if (updatedMission.mission_id === action.payload.id) {
+          if (action.payload.newState === 'join') {
+            updatedMission.reserved = true;
+          } else {
+            updatedMission.reserved = false;
+          }
+        }
+        return updatedMission;
+      });
     },
   },
   extraReducers: (builder) => {

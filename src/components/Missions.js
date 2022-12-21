@@ -13,8 +13,8 @@ const Missions = () => {
     }
   }, [dispatch, missions.length]);
 
-  const handleClick = (id) => {
-    dispatch(updateMission(id));
+  const handleClick = (id, reserved) => {
+    dispatch(updateMission({ id, newState: reserved ? 'leave' : 'join' }));
   };
 
   return (
@@ -45,7 +45,7 @@ const Missions = () => {
               <button
                 className={`${mission.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
                 type="button"
-                onClick={() => handleClick(mission.mission_id)}
+                onClick={() => handleClick(mission.mission_id, mission.reserved)}
               >
                 {mission.reserved ? 'Leave Mission' : 'Join Mission'}
               </button>
