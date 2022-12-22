@@ -11,7 +11,7 @@ import Missions from '../components/Missions';
 
 const missions = [{
   mission_id: 1,
-  mission_name: 'test rocket',
+  mission_name: 'test mission',
   description: 'test description',
 }];
 
