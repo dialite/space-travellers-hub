@@ -13,37 +13,40 @@ const Rockets = () => {
     }
   }, [dispatch, rockets.length]);
 
-  const handleClick = (id) => {
-    dispatch(updateRocket(id));
+  const handleClick = (id, reserved) => {
+    dispatch(updateRocket({ id, newState: reserved ? ' ' : 'link' }));
   };
 
   return (
-    <table className="frame">
+    <div className="frame">
       {rockets.map((rocket) => (
-        <tbody key={rocket.rocket_id}>
-          <tr className="table-list">
-            <td className="image">
-              <div className="image-container">
-                <img src={rocket.images} alt={rocket.rocket_name} />
-              </div>
-            </td>
-            <td className="description">
-              <div>{rocket.rocket_name}</div>
-              {rocket.reserved ? <span className="rocket-reserved">Reserved</span> : null}
-              {rocket.description}
+        <div key={rocket.rocket_id}>
+          <div className="rocket-container">
+            <div className="image-container">
+              <img src={rocket.images} alt={rocket.rocket_name} />
+            </div>
+            <div className="rocket-details">
+              <h2 className="rocket-title">{rocket.rocket_name}</h2>
+              <p className="rocket-description">
+                {rocket.reserved && (
+                <span className="rocket-badge">
+                  Reserved
+                </span>
+                )}
+                {' '}
+                {rocket.description}
+              </p>
               <br />
-              <button
-                className={`${rocket.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
-                type="button"
-                onClick={() => handleClick(rocket.rocket_id)}
-              >
-                {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-              </button>
-            </td>
-          </tr>
-        </tbody>
+              {!rocket.reserved ? (
+                <button type="button" className="rocket-reserve-btn" onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}>Reserve Rocket</button>
+              ) : (
+                <button type="button" className="rocket-cancel-btn" onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}>Cancel Reservation</button>
+              )}
+            </div>
+          </div>
+        </div>
       ))}
-    </table>
+    </div>
   );
 };
 

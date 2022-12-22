@@ -22,10 +22,17 @@ const rocketSlice = createSlice({
   initialState,
   reducers: {
     updateRocket: (state, action) => {
-      const updatedRocket = state.rocketData.find((rocket) => (
-        rocket.rocket_id === action.payload
-      ));
-      updatedRocket.reserved = !updatedRocket.reserved;
+      state.rocketData.map((rocket) => {
+        const updatedRocket = rocket;
+        if (updatedRocket.rocket_id === action.payload.id) {
+          if (action.payload.newState === 'link') {
+            updatedRocket.reserved = true;
+          } else {
+            updatedRocket.reserved = false;
+          }
+        }
+        return updatedRocket;
+      });
     },
   },
   extraReducers: (builder) => {
