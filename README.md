@@ -52,8 +52,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Displays the data of all the rockets and the missions**
 - **User can resrve a rocket and join a mission**
 - **User can see reserved rockets and joined missions in the My Profile page**
@@ -71,8 +69,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
