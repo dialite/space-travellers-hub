@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+nav {
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style-type: none;
+}
+
+nav ul li {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.activelink {
+  text-decoration: underline;
+}
+
+.divider {
+  background-color: rgba(0, 0, 0, 0.705);
+  width: 2px;
+  height: 20px;
+}
