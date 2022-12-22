@@ -1,4 +1,4 @@
-table {
+/* table {
   border: 1px solid black;
   border-collapse: collapse;
   margin: 30px;
@@ -58,4 +58,4 @@ tbody:nth-child(even) {
 .btn-leave {
   border: 1px solid red;
   color: red;
-}
+} */

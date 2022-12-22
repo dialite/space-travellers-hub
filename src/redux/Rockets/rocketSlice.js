@@ -5,21 +5,29 @@ const initialState = { loading: false, rocketData: [], error: '' };
 
 export const getRocket = createAsyncThunk('rockets/fetchRockets', async () => {
   const rocketData = await fetchRocket().then((data) => data);
-  const rocket = [];
+  const rockets = [];
   rocketData.forEach((element) => {
-    rocket.push({
+    rockets.push({
       rocket_id: element.id,
       rocket_name: element.rocket_name,
       description: element.description,
       images: element.flickr_images,
     });
   });
-  return rocket;
+  return rockets;
 });
 
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    updateRocket: (state, action) => {
+      const updatedRocket = state.rocketData.find((rocket) => (
+        rocket.rocket_id === action.payload
+      ));
+      updatedRocket.reserved = !updatedRocket.reserved;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getRocket.pending, (state) => {
       const newState = { ...state, loading: true };
@@ -37,3 +45,4 @@ const rocketSlice = createSlice({
 });
 
 export default rocketSlice.reducer;
+export const { updateRocket } = rocketSlice.actions;
