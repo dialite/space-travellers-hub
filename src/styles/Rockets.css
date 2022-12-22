@@ -1,30 +1,34 @@
-
 .image-container img {
-  width: 300px;
+  width: 350px;
   height: 200px;
+  margin-right: 20px;
+}
+
+.rocket-title {
+    margin-bottom: 20px;;
 }
 
 .rocket-container {
     display: flex;
     margin: 20px 80px;
     gap: 20px;
-  }
-  
-  .rocket-details {
+}
+
+.rocket-details {
     display: flex;
     flex-direction: column;
     margin-right: 50px;
-  }
-  
-  .rocket-badge {
+}
+
+.rocket-badge {
     background-color: rgb(37, 177, 187);
     color: #fff;
     padding: 2px;
     border-radius: 3px;
     margin-right: 5px;
-  }
-  
-  .rocket-reserve-btn {
+}
+
+.rocket-reserve-btn {
     width: 180px;
     background-color: #0290ff;
     color: #fff;
@@ -34,9 +38,9 @@
     padding: 10px;
     height: 50px;
     font-size: 20px;
-  }
-  
-  .rocket-cancel-btn {
+}
+
+.rocket-cancel-btn {
     width: 200px;
     background-color: red;
     color: #fff;
@@ -46,5 +50,9 @@
     padding: 10px;
     height: 50px;
     font-size: 20px;
-  }
+}
 
+.rockets-description {
+    font-size: 20px;
+    vertical-align: top;
+}
