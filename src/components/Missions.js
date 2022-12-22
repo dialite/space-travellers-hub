@@ -16,7 +16,6 @@ const Missions = () => {
   const handleClick = (id, reserved) => {
     dispatch(updateMission({ id, newState: reserved ? 'leave' : 'join' }));
   };
-
   return (
     <table className="mission-table">
       <thead>
@@ -45,7 +44,7 @@ const Missions = () => {
               <button
                 className={`${mission.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
                 type="button"
-                onClick={() => handleClick(mission.mission_id, mission.reserved)}
+                onClick={() => handleClick(mission.mission_id)}
               >
                 {mission.reserved ? 'Leave Mission' : 'Join Mission'}
               </button>
