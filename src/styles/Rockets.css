@@ -1,33 +1,32 @@
 table {
-    border: none;
-    border-collapse: collapse;
-    margin: 30px;
-  }
-  
-  th,
-  td {
-    border: none;
-    text-align: left;
-    padding: 10px;
-  }
-  
-  .table-list {
-    background-color: #fff;
-  }
-  
-  .rocket {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .rocket .image-container {
-    width: 300px;
-    height: 200px;
-    margin-right: 20px;
-  }
-  
-  .image-container img {
-    width: 300px;
-    height: 200px;
-  }
-  
+  border: none;
+  border-collapse: collapse;
+  margin: 30px;
+}
+
+th,
+td {
+  border: none;
+  text-align: left;
+  padding: 10px;
+}
+
+.table-list {
+  background-color: #fff;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+}
+
+.rocket .image-container {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 300px;
+  height: 200px;
+}
