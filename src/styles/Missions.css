@@ -1,11 +1,11 @@
-table {
+.mission-table {
   border: 1px solid black;
   border-collapse: collapse;
   margin: 30px;
 }
 
-th,
-td {
+.mission-table-head,
+.mission-table-data {
   border: 1px solid black;
   text-align: left;
   padding: 10px;

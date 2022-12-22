@@ -18,30 +18,30 @@ const Missions = () => {
   };
 
   return (
-    <table>
+    <table className="mission-table">
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th className="text-white"> </th>
+          <th className="mission-table-head">Mission</th>
+          <th className="mission-table-head">Description</th>
+          <th className="mission-table-head">Status</th>
+          <th className="mission-table-head"> </th>
         </tr>
       </thead>
       {missions.map((mission) => (
         <tbody key={mission.mission_id}>
           <tr>
-            <td className="name">
+            <td className="name mission-table-data">
               {mission.mission_name}
             </td>
-            <td className="description">
+            <td className="description mission-table-data">
               {mission.description}
             </td>
-            <td className="member">
+            <td className="member mission-table-data">
               <span className={mission.reserved ? 'active-member' : 'not-member'}>
                 {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
               </span>
             </td>
-            <td className="join">
+            <td className="join mission-table-data">
               <button
                 className={`${mission.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
                 type="button"
