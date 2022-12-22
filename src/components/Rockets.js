@@ -41,8 +41,8 @@ const Rockets = () => {
                 <button
                   type="button"
                   className="rocket-reserve-btn"
-                  data-testid={`btn-${rocket.rocket_id}`}
                   onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}
+                  data-testid={`btn-${rocket.rocket_id}`}
                 >
                   Reserve Rocket
                 </button>
@@ -50,8 +50,8 @@ const Rockets = () => {
                 <button
                   type="button"
                   className="rocket-cancel-btn"
-                  data-testid={`btn-${rocket.rocket_id}`}
                   onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}
+                  data-testid={`btn-${rocket.rocket_id}`}
                 >
                   Cancel Reservation
                 </button>

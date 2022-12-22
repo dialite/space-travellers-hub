@@ -10,9 +10,10 @@ import store from '../redux/configureStore';
 import Rockets from '../components/Rockets';
 
 const rockets = [{
-  rocket_id: 1,
+  id: 1,
   rocket_name: 'test rocket',
   description: 'test description',
+  flickr_images: ['https://imgur.com/DaCfMsj.jpg'],
 }];
 
 let spyFunc;
@@ -33,16 +34,16 @@ afterEach(() => {
   jest.restoreAllMocks();
 });
 
-describe('Testing mission reservation', () => {
-  test('Test for join mission', async () => {
+describe('Testing rocket reservation', () => {
+  test('Test to reserve rocket', async () => {
     expect(spyFunc).toBeCalled();
-    const reservedBtn = screen.getByTestId('btn-1');
-    act(() => fireEvent.click(reservedBtn));
-    await waitFor(() => expect(reservedBtn.textContent).toBe('Leave Mission'));
+    const reservedButton = screen.getByTestId('btn-1');
+    act(() => fireEvent.click(reservedButton));
+    await waitFor(() => expect(reservedButton.textContent).toBe('Cancel Reservation'));
   });
-  test('Test for leave mission', async () => {
-    const toggleReservation = screen.getByTestId('btn-1');
-    act(() => fireEvent.click(toggleReservation));
-    await waitFor(() => expect(toggleReservation.textContent).toBe('Join Mission'));
+  test('Test to cancel rocket reservation', async () => {
+    const switchReservation = screen.getByTestId('btn-1');
+    act(() => fireEvent.click(switchReservation));
+    await waitFor(() => expect(switchReservation.textContent).toBe('Reserve Rocket'));
   });
 });
