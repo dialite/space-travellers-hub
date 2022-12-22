@@ -1,12 +1,12 @@
 .mission-table {
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 30px;
 }
 
 .mission-table-head,
 .mission-table-data {
-  border: 1px solid black;
+  border: 1px solid #ccc;
   text-align: left;
   padding: 10px;
 }
