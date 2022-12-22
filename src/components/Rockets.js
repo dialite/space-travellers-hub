@@ -22,12 +22,12 @@ const Rockets = () => {
       {rockets.map((rocket) => (
         <tbody key={rocket.rocket_id}>
           <tr className="table-list">
-            <td className="image">
+            <td className="image table-rockets-data">
               <div className="image-container">
                 <img src={rocket.images} alt={rocket.rocket_name} />
               </div>
             </td>
-            <td className="description">
+            <td className="rockets-description table-rockets-data">
               <div>{rocket.rocket_name}</div>
               {rocket.reserved ? <span className="rocket-reserved">Reserved</span> : null}
               {rocket.description}

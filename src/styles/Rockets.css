@@ -1,12 +1,8 @@
-table {
-  border: none;
-  border-collapse: collapse;
+.frame {
   margin: 30px;
 }
 
-th,
-td {
-  border: none;
+.table-rockets-data {
   text-align: left;
   padding: 10px;
 }
@@ -15,18 +11,21 @@ td {
   background-color: #fff;
 }
 
-.rocket {
-  display: flex;
-  flex-direction: row;
+.image {
+  width: 20%;
 }
 
-.rocket .image-container {
+.image-container {
   width: 300px;
   height: 200px;
-  margin-right: 20px;
 }
 
 .image-container img {
   width: 300px;
   height: 200px;
+}
+
+.rockets-description {
+  vertical-align: top;
+  padding: 10px;
 }
