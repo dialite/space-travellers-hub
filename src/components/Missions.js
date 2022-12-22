@@ -17,7 +17,7 @@ const Missions = () => {
     dispatch(updateMission({ id, newState: reserved ? 'leave' : 'join' }));
   };
   return (
-    <table className="mission-table" data-testid="mission-list">
+    <table className="mission-table">
       <thead>
         <tr>
           <th className="mission-table-head">Mission</th>
