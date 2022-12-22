@@ -25,6 +25,7 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -129,6 +130,16 @@ To run tests, run the following command:
 - GitHub: [@dialite](https://github.com/dialite)
 - Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **My Profile section can be enhanced by adding the "Cancel reservation" and "Leave Mission" buttons to the list items**
+- **"Read more" button feature for each mission and rocket can be added in the MY Profile section**
+- **Styling for the project can be improved by making it a colorful website**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
