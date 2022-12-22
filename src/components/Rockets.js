@@ -38,9 +38,23 @@ const Rockets = () => {
               </p>
               <br />
               {!rocket.reserved ? (
-                <button type="button" className="rocket-reserve-btn" onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}>Reserve Rocket</button>
+                <button
+                  type="button"
+                  className="rocket-reserve-btn"
+                  data-testid={`btn-${rocket.rocket_id}`}
+                  onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}
+                >
+                  Reserve Rocket
+                </button>
               ) : (
-                <button type="button" className="rocket-cancel-btn" onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}>Cancel Reservation</button>
+                <button
+                  type="button"
+                  className="rocket-cancel-btn"
+                  data-testid={`btn-${rocket.rocket_id}`}
+                  onClick={() => handleClick(rocket.rocket_id, rocket.reserved)}
+                >
+                  Cancel Reservation
+                </button>
               )}
             </div>
           </div>
