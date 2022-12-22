@@ -44,7 +44,8 @@ const Missions = () => {
               <button
                 className={`${mission.reserved ? 'btn-leave' : 'btn-join'} ${'btn'}`}
                 type="button"
-                onClick={() => handleClick(mission.mission_id)}
+                onClick={() => handleClick(mission.mission_id, mission.reserved)}
+                data-testid={`btn-${mission.mission_id}`}
               >
                 {mission.reserved ? 'Leave Mission' : 'Join Mission'}
               </button>
