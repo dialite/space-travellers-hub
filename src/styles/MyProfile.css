@@ -1,0 +1,31 @@
+.my-profile {
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+.container p {
+  font-style: italic;
+}
+
+.container ul {
+  border: 1px solid #ccc;
+  list-style-type: none;
+  border-radius: 4px;
+}
+
+.container ul li {
+  padding: 15px 15px 25px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.container ul li:last-child {
+  border-bottom: none;
+}
