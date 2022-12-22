@@ -16,7 +16,6 @@ const Missions = () => {
   const handleClick = (id, reserved) => {
     dispatch(updateMission({ id, newState: reserved ? 'leave' : 'join' }));
   };
-
   return (
     <table className="mission-table" data-testid="mission-list">
       <thead>
